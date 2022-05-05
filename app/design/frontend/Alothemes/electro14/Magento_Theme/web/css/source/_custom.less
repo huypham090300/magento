@@ -1,0 +1,79 @@
+& when (@media-common =true) {
+    header {
+        .magicmenu .nav-desktop .level0 .cat_label.SALE:before, 
+        .magicmenu .nav-desktop .level0 .cat_label.Sale:before, 
+        .magicmenu .nav-desktop .level0 .cat_label.sale:before, 
+        .vmagicmenu .level0 .cat_label.SALE:before, 
+        .vmagicmenu .level0 .cat_label.Sale:before, 
+        .vmagicmenu .level0 .cat_label.sale:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.SALE:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.Sale:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.sale:before {
+            border-top-color: #ff6600; 
+        }
+    
+        .magicmenu .nav-desktop .level0 .cat_label.NEW:before, 
+        .magicmenu .nav-desktop .level0 .cat_label.New:before, 
+        .magicmenu .nav-desktop .level0 .cat_label.sale:before, 
+        .vmagicmenu .level0 .cat_label.NEW:before, 
+        .vmagicmenu .level0 .cat_label.New:before, 
+        .vmagicmenu .level0 .cat_label.new:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.NEW:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.New:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.new:before {
+            border-top-color: #009966; 
+        }
+    }
+
+    
+}
+
+/* responsive */
+& when (@media-common =true) {
+    @media screen and (max-width: (@screen__xl-m)) {}
+
+    @media screen and (max-width: (@screen__xm - 1)) {}
+
+    @media screen and (max-width: (@screen__m - 1)) {}
+
+    @media screen and (max-width: (@screen__s - 1)) {}
+
+    @media screen and (max-width: (@screen__ss - 1)) {}
+
+    @media screen and (max-width: @screen__xs) {}
+
+    @media screen and (max-width: @screen__xs-m) {}
+}
+
+/* Right to left */
+& when (@media-common =true) {
+    .rtl {}
+
+    @media screen and (max-width: (@screen__xl-m - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__xm - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__m - 1) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__s - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__ss - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__xs) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__xs-m) {
+        .rtl {}
+    }
+}

@@ -1,0 +1,57 @@
+/*
+ * @@Create Date: Friday July 5th 2019
+ * @@Modify Date: Friday July 5th 2019 4:09:30 pm
+ * 
+ * @filename: _module.less
+ * 
+ * +-------------------------------------------------------------------------------------------+
+ * | MAGENPOW                                                                                  |
+ * | @category: Magepow                                                                        |
+ * | @copyright: Copyright (c) 2014 Magepow (http://www.magepow.com/)                          |
+ * | @license: http://www.magepow.com/license-agreement                                        |
+ * | @Author: Nguyen Ba Cuong                                                                  |
+ * | @Position: Web design                                                                     |
+ * +-------------------------------------------------------------------------------------------+
+ */
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+*/
+
+& when (@media-common = true) {
+    .contact-index-index {
+        .column:not(.sidebar-main) {
+            .form.contact {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .column:not(.sidebar-additional) {
+            .form.contact {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+}
+
+//  Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .contact-index-index {
+        .column:not(.sidebar-main) {
+            .form.contact {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        .column:not(.sidebar-additional) {
+            .form.contact {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+}
+

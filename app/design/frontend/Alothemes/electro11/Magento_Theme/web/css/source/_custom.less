@@ -1,0 +1,68 @@
+& when (@media-common =true) {
+    .block-countdown {
+        .page-countdown-product {
+            .label {
+                z-index: 10;
+            }
+        }
+    }
+
+    .instagram-feed {
+        margin-top: 0;
+    }
+
+    .hot-trending {
+        padding-bottom: 40px;
+    }
+}
+
+/* responsive */
+& when (@media-common =true) {
+    @media screen and (max-width: (@screen__xl-m)) {}
+
+    @media screen and (max-width: (@screen__xm - 1)) {}
+
+    @media screen and (max-width: (@screen__m - 1)) {}
+
+    @media screen and (max-width: (@screen__s - 1)) {}
+
+    @media screen and (max-width: (@screen__ss - 1)) {}
+
+    @media screen and (max-width: @screen__xs) {}
+
+    @media screen and (max-width: @screen__xs-m) {}
+}
+
+/* Right to left */
+& when (@media-common =true) {
+    .rtl {
+    }
+
+    @media screen and (max-width: (@screen__xl-m - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__xm - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__m - 1) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__s - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__ss - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__xs) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__xs-m) {
+        .rtl {}
+    }
+}

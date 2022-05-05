@@ -1,0 +1,17 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div class="footer-copyright row">
+		<div class="main1 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+			<small class="copyright">
+				<span><?php /* @escapeNotVerified */ echo preg_replace('/yyyy/', date('Y'), $block->getCopyright()); ?></span>
+			</small>
+		</div>
+		<div class="main2 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+		<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('block-payment-card')->toHtml();?>
+		</div>
+	<a href="#" id="backtotop"><span class="icon-top fa fa-angle-up"></span><span class="back-to-top"><?php echo __('Top')?></span></a>
+</div>

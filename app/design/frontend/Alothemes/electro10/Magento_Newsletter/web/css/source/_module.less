@@ -1,0 +1,45 @@
+/*
+ * @@Create Date: Friday July 5th 2019
+ * @@Modify Date: Friday July 5th 2019 4:09:13 pm
+ * 
+ * @filename: _module.less
+ * 
+ * +-------------------------------------------------------------------------------------------+
+ * | MAGENPOW                                                                                  |
+ * | @category: Magepow                                                                        |
+ * | @copyright: Copyright (c) 2014 Magepow (http://www.magepow.com/)                          |
+ * | @license: http://www.magepow.com/license-agreement                                        |
+ * | @Author: Nguyen Ba Cuong                                                                  |
+ * | @Position: Web design                                                                     |
+ * +-------------------------------------------------------------------------------------------+
+ */
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//    Common
+//--------------------------------------
+
+& when (@media-common = true) {
+
+//
+//    Newsletter subscription
+//--------------------------------------
+
+.block.newsletter {
+    .title {
+        display: none;
+    }
+    .label {
+        &:extend(.abs-visually-hidden all);
+    }
+}
+
+}
+
+//
+//    Desktop
+//--------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {}

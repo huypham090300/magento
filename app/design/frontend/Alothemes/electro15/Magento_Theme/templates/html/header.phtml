@@ -1,0 +1,88 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+?>
+<?php 
+ $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+ $customerSession = $objectManager->get('Magento\Customer\Model\SessionFactory')->create();
+?>
+<header class="page-header alothemes">
+    <div class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row ">
+                    <div class="mobile-center top-left col-sm-5">
+                        <div class="welcometop"><?php echo $this->getChildHtml('welcometop'); ?></div>
+                        <div class="hot-contact">
+                            <div class="hotline">
+                                <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top-information-left')->toHtml();?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-right mobile-center col-sm-7">
+                        <div class="header-top-link">
+                            <div class="header-setting tool-setting">
+                                <?php echo $this->getChildHtml('store_language'); ?>
+                                <?php echo $this->getChildHtml('currency'); ?>
+                            </div>
+                            <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top-information-right')->toHtml();?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-sticker">
+            <div class="header-content menu-mobile ">
+                <div class="container">
+                    <div class="row row-header-content">
+                        <div class="content-logo">
+                            <div class="header-logo">
+                                <?php echo $this->getChildHtml('logo'); ?>
+                            </div>
+                        </div>
+                        <div class="content-search">
+                            <div class="search-area header-search">
+                                <?php echo $this->getChildHtml('top.search'); ?>
+                            </div>
+                        </div>
+                        <div class="content-cart">
+                            <?php echo $this->getChildHtml('account.links'); ?>
+                            <?php echo $this->getChildHtml('minicart'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row row-header-bottom">
+                    <div class="header-vertical-menu">
+                        <?php echo $this->getChildHtml('vmenu.topnav'); ?>
+                    </div>
+                    <div class="content-menu">
+                        <div class="menu">
+                            <?php echo $this->getChildHtml('navigation.sections'); ?>
+                            <div class="no-display" style="display:none"><?php echo $this->getChildHtml('top.links2'); ?></div>	
+                            <?php echo $this->getChildHtml('catalog.topnav'); ?>
+                            <span data-action="toggle-nav"
+                                class="action nav-toggle"><span><?php /* @escapeNotVerified */ echo __('Toggle Nav') ?></span>
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="content-selection">
+                        <li class="selection-1"><a href="#"><?php echo __('Special Offer') ?></a></li>
+                        <li class="selection-2"><a href="#"><?php echo __('Purchase Theme!') ?></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

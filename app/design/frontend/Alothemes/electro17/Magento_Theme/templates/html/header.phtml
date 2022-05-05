@@ -1,0 +1,116 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile 7
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+?>
+<?php 
+ $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+ $customerSession = $objectManager->get('Magento\Customer\Model\SessionFactory')->create();
+?>
+<link href="//fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&subset=latin-ext"
+    rel="stylesheet">
+<header class="page-header alothemes">
+    <div class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="mobile-center top-left top-link col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="header-setting tool-setting">
+                            <?php echo $this->getChildHtml('store_language'); ?>
+                            <?php echo $this->getChildHtml('currency'); ?>
+                        </div>
+                        <div class="text-header-top"><?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top-information-left')->toHtml();?></div>
+                    </div>
+                    <div class="top-right mobile-center col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="header-top-link">
+                            <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top-information-right')->toHtml();?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-sticker">
+            <div class="header-content menu-mobile ">
+                <div class="container">
+                    <div class="row row-header-content">
+                        <div class="nav-toggle-mobile d-xl-none">
+                            <div class="nav-toggle-main">
+                                <span data-action="toggle-nav" class="action nav-toggle">
+                                    <span><?= /* @escapeNotVerified */ __('Toggle Nav') ?></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="content-logo">
+                            <div class="header-logo">
+                                <?php echo $this->getChildHtml('logo'); ?>
+                            </div>
+                        </div>
+
+                        <div class="menu-horizontal">
+                            <div class="menu">
+                                <?php echo $this->getChildHtml('navigation.sections'); ?>
+                                <div class="no-display" style="display:none"><?php echo $this->getChildHtml('top.links2'); ?></div>
+                                <?php echo $this->getChildHtml('catalog.topnav'); ?>
+                            </div>
+                        </div>
+                    
+                        <div class="content-selection">
+                            <div class="tool-header-selection">
+                                <div class="header-top-link">
+                                    <span class="order"><i class="gokko-icon icon-truck"></i><?php echo __('Track Your Order') ?></span>
+                                    <div class="top-links">
+                                        <?php echo $this->getChildHtml('account.links'); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="header-vertical-menu col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                        <?php echo $this->getChildHtml('vmenu.topnav'); ?>
+                    </div>
+
+                    <div class="content-search col-xl-6 col-lg-6 col-md-9 col-sm-9">
+                        <div class="search-area header-search">
+                            <?php echo $this->getChildHtml('top.search'); ?>
+                        </div>
+                    </div>
+                    <div class="content-cart col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
+                        <div class="tool-header">
+                            <ul>
+                                <li>
+                                    <a title="<?php echo _('Compare') ?>"
+                                        href="<?php echo $this->getUrl('catalog/product_compare') ?>" target="_blank"
+                                        class="top-link-mycompare"><?php echo _('Compare') ?></a>
+                                </li>
+                                <li>
+                                    <a title="<?php echo __('Wishlist') ?>"
+                                        href="<?php echo $this->getUrl('wishlist') ?>" target="_blank"
+                                        class="top-link-mywishlist">
+                                        <?php echo __('Favorite') ?>
+                                    </a>
+                                </li>
+                                <li><?php echo $this->getChildHtml('minicart'); ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

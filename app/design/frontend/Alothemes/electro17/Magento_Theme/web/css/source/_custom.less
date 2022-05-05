@@ -1,0 +1,111 @@
+& when (@media-common =true) {
+    .magicmenu {
+        .nav-desktop {
+            position: relative;
+
+            .level0 {
+                &:hover {
+                    .level-top-mega {
+                        top: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .page-countdown-product {
+        .product {
+            .product-item-info {
+                .product-hover {
+                    .link-view {
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .minicart-items .product>.product-item-photo {
+        min-width: 90px;
+        width: 90px;
+    }
+
+    .modal-popup.modal-slide.modals-ajaxcart .actions .checkout-link {
+        width: 100%;
+        margin-right: 0;
+        flex: none;
+        margin-bottom: 10px;
+    }
+
+    .modal-popup.modal-slide.modals-ajaxcart .actions .full-width {
+        width: 100% !important;
+    }
+
+    .block-countdown {
+        .product-item .price-box {
+            text-align: center;
+        }
+
+        .page-countdown-product {
+            .product-item-name {
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* responsive */
+& when (@media-common =true) {
+    @media screen and (max-width: (@screen__xl-m - 1)) {}
+
+    @media screen and (max-width: (@screen__xm - 1)) {}
+
+    @media screen and (max-width: (@screen__m - 1)) {
+        .header {
+            .tool-header {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: (@screen__s - 1)) {}
+
+    @media screen and (max-width: (@screen__ss - 1)) {}
+
+    @media screen and (max-width: @screen__xs) {}
+
+    @media screen and (max-width: @screen__xs-m) {}
+}
+
+/* Right to left */
+& when (@media-common =true) {
+    .rtl {}
+
+    @media screen and (max-width: (@screen__xl-m - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__xm - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__m - 1) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__s - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__ss - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__xs) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__xs-m) {
+        .rtl {}
+    }
+}

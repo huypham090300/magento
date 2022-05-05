@@ -1,0 +1,109 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+?>
+<?php 
+ $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+ $customerSession = $objectManager->get('Magento\Customer\Model\SessionFactory')->create();
+?>
+<header class="page-header alothemes">
+    <div class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row ">
+                    <div class="mobile-center top-left col-sm-6">
+                        <div class="header-setting tool-setting">
+                            <?php echo $this->getChildHtml('store_language'); ?>
+                            <?php echo $this->getChildHtml('currency'); ?>
+
+                        </div>
+                        <div class="text-header-top">
+                             <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top-information-left')->toHtml();?>
+                        </div>
+                    </div>
+                    <div class="top-right mobile-center col-sm-6">
+                        <div class="header-top-link">
+                            
+                            <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top-information-right')->toHtml();?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-sticker">
+            <div class="header-content menu-mobile ">
+                <div class="container">
+                    <div class="row row-header-content">
+                        <div class="content-logo">
+                            <div class="header-logo">
+                                <?php echo $this->getChildHtml('logo'); ?>
+                            </div>
+                        </div>
+                        <div class="content-search">
+                            <div class="search-area header-search">
+                                <?php echo $this->getChildHtml('top.search'); ?>
+                            </div>
+                        </div>
+                        <div class="content-cart">
+                            <div class="tool-header">
+                                <ul>
+                                    <?php //echo $this->getChildHtml('catalog.compare.link'); ?>
+                                    <li>
+                                        <a title="<?php echo _('Compare') ?>"
+                                            href="<?php echo $this->getUrl('catalog/product_compare') ?>"
+                                            target="_blank" class="top-link-mycompare"><?php echo _('Compare') ?></a>
+                                    </li>
+                                    <li>
+                                        <a title="<?php echo __('Wishlist') ?>"
+                                            href="<?php echo $this->getUrl('wishlist') ?>" target="_blank"
+                                            class="top-link-mywishlist">
+                                            <?php echo __('Favorite') ?>
+                                        </a>
+                                    </li>
+                                    <li><?php echo $this->getChildHtml('minicart'); ?></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row row-header-bottom">
+                    <div class="header-vertical-menu">
+                        <?php echo $this->getChildHtml('vmenu.topnav'); ?>
+                    </div>
+                    <div class="content-menu">
+                        <div class="menu">
+                            <?php echo $this->getChildHtml('navigation.sections'); ?>
+                            <div class="no-display" style="display:none"><?php echo $this->getChildHtml('top.links2'); ?></div>	
+                            <?php echo $this->getChildHtml('catalog.topnav'); ?>
+                        </div>
+                    </div>
+                    <div class="content-selection">
+                        <div class="tool-header-selection">
+                            <div class="header-top-link">
+                                <span class="order"><i class="gokko-icon icon-truck"></i><?php echo __('Track Your Order') ?></span>
+                                <div class="top-links">
+                                    <?php echo $this->getChildHtml('account.links'); ?>
+                                </div>
+                                <span data-action="toggle-nav"
+                                    class="action nav-toggle"><span><?php /* @escapeNotVerified */ echo __('Toggle Nav') ?></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

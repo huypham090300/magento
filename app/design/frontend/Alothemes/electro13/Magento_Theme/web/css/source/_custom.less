@@ -1,0 +1,160 @@
+& when (@media-common =true) {
+    .modal-popup.modal-slide.modals-ajaxcart {
+        .actions {
+            .checkout-link {
+                margin-bottom: 15px;
+                margin-right: 0;
+                width: 100%;
+                flex: none;
+            }
+
+            .full-width {
+                width: 100% !important;
+            }
+        }
+    }
+
+    .special-offer {
+        .content-products {
+            .slick-list {
+                .sticker {
+                    z-index: 10;
+                }
+            }
+        }
+    }
+
+    .testimonial {
+        .customer {
+            margin: 0;
+        }
+        
+        .block-content {
+            .item {
+                .testimonial_text {
+                    padding: 22px 60px 15px 61px;
+                }
+            }
+        }
+    }
+
+    header {
+        .magicmenu .nav-desktop .level0 .cat_label.SALE:before, 
+        .magicmenu .nav-desktop .level0 .cat_label.Sale:before, 
+        .magicmenu .nav-desktop .level0 .cat_label.sale:before, 
+        .vmagicmenu .level0 .cat_label.SALE:before, 
+        .vmagicmenu .level0 .cat_label.Sale:before, 
+        .vmagicmenu .level0 .cat_label.sale:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.SALE:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.Sale:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.sale:before {
+            border-top-color: #ff6600; 
+        }
+    
+        .magicmenu .nav-desktop .level0 .cat_label.NEW:before, 
+        .magicmenu .nav-desktop .level0 .cat_label.New:before, 
+        .magicmenu .nav-desktop .level0 .cat_label.sale:before, 
+        .vmagicmenu .level0 .cat_label.NEW:before, 
+        .vmagicmenu .level0 .cat_label.New:before, 
+        .vmagicmenu .level0 .cat_label.new:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.NEW:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.New:before, 
+        .nav-sections .navigation-mobile ul li a .cat_label.new:before {
+            border-top-color: #009966; 
+        }
+    }
+
+    .modal-popup.popup-newsletter .modal-content .block-content {
+        padding: 0;
+    }
+}
+
+/* responsive */
+& when (@media-common =true) {
+    @media screen and (max-width: (@screen__xl-m)) {}
+
+    @media screen and (max-width: (@screen__xm - 1)) {
+        .img-content-bottom {
+            .tp-bgimg {
+                top: 100px;
+                right: 50%;
+                transform: translate(50%, 0);
+                width: 90%;
+            }
+        }
+
+        .nlt-and-tml {
+            flex-wrap: wrap;
+            
+            > .testimonial {
+                margin-top: 30px;
+            }
+            > .testimonial ,
+            .box-newsletter {
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width: (@screen__m - 1)) {
+        .notify-slider-wrapper {
+            display: none !important;
+        }
+    }
+
+    @media screen and (max-width: (@screen__s - 1)) {}
+
+    @media screen and (max-width: (@screen__ss - 1)) {}
+
+    @media screen and (max-width: @screen__xs) {}
+
+    @media screen and (max-width: @screen__xs-m) {}
+}
+
+/* Right to left */
+& when (@media-common =true) {
+    .rtl {
+        .magicmenu {
+            .nav-desktop {
+                .level0 {
+                    .level-top-mega {
+                        .mega-block-bottom {
+                            padding-right: 0;
+                            padding-left: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // home 12
+    }
+
+    @media screen and (max-width: (@screen__xl-m - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__xm - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__m - 1) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__s - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: (@screen__ss - 1)) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__xs) {
+        .rtl {}
+    }
+
+    @media screen and (max-width: @screen__xs-m) {
+        .rtl {}
+    }
+}

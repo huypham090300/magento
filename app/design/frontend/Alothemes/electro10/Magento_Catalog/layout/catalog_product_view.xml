@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <move element="page.main.title" destination="product.shop.content" before="-"/>
+        <move element="product.info.price" destination="product.shop.content" after="page.main.title"/>
+        <move element="product.info.review" destination="product.info.price" before="-"/>
+        <move element="product.price.final" destination="product.info.price" after="product.info.overview"/>
+        <move element="product.info.extrahint" destination="product.shop.content" after="product.info"/>
+        <move element="product.info" destination="product.shop.content"/>
+        <move element="product.info.overview" destination="product.info.price" before="product.price.final"/>
+        <move element="alo.product.timer" destination="product.shop.content" after="product.info.overview"/>
+        <move element="product.info.mailto" destination="product.info.addtocart" after="product.info.addto"/>
+        <move element="product.info.addto" destination="product.info.addtocart"/>
+        <container name="alo.product.timer" as="alo_product_timer" label="Alo Product Timer"  htmlTag="div" htmlClass="sections-content-timer wrap"/>
+        <!-- <referenceBlock name="product.info.addto" remove="true" /> -->
+        <referenceContainer name="product.info.main" htmlClass="product-info-main product-shop col-xl-6 col-lg-6 col-md-6 col-sm-12" />
+        <referenceContainer name="product.info.media" htmlClass="product media product-img-box clearfix col-xl-6 col-lg-6 col-md-6 col-sm-12" />
+        <referenceContainer name="alo.product.timer" htmlClass="additional-timer-block">
+            <block class="Magento\Catalog\Block\Product\View" name="product.timer" as="product_timer" template="product/view/timer.phtml">
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Timer</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="product.info.extrahint">
+            <block class="Magento\Catalog\Block\Product\View" name="product.social.main" template="Magento_Catalog::product/view/social.phtml" after="product.info.mailto"/>
+        </referenceContainer>
+    </body>
+</page>
